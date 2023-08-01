@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        input {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    Họ: <input type="text" ng-model="firstName"><br>
+    Tên: <input type="text" ng-model="lastName"><br>
+    Họ và Tên: {{firstName + " " + lastName}}
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.firstName = "";
+            $scope.lastName = "";
+        });
+    </script>
+</body>
+</html>
 
